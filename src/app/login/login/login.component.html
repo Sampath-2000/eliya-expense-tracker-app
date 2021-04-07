@@ -1,0 +1,58 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="left-content col-xs-12 col-sm-12 col-md-6 col-lg-6 pr-0 pl-0">
+      <div class="slider">
+        <img src="../../../assets/img_slider_01.png" class="img-fluid pt-5 ml-5" />
+        <h3 class="slider-title">Goals made easy</h3>
+        <p class="slider-content">
+          Objectives you set for how you’ll save and spend money. They <br />
+          can be things you hope to achieve in the short term or further<br />
+          down the road
+        </p>
+        <div class="slider-nav">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+      <div class="text-center">
+        <img src="../../../assets/logo.png" class="logo-image" />
+        <p>Welcome back! Please login to your account.</p>
+        <div class="d-grid ml-auto mr-auto pt-5">
+          <mat-form-field class="username">
+            <mat-label>Email</mat-label>
+            <input matInput type="text" name="email" [(ngModel)]="login.email" />
+          </mat-form-field>
+          <mat-form-field class="password">
+            <mat-label>Password</mat-label>
+            <input matInput type="password" name="password" [(ngModel)]="login.password"
+              (keyup.enter)="loginCheck(login)" />
+          </mat-form-field>
+        </div>
+        <h5 class="pt-5">Forgot Password?</h5>
+        <button mat-flat-button class="login-btn mt-5" (click)="loginCheck(login)">LOGIN</button>
+        <p>or</p>
+        <div class="login-social-media mt-5">
+          <div>
+            <img src="../../../assets/img_icon_google.png" />
+          </div>
+          <div>
+            <img src="../../../assets/img_icon_facebook.png" />
+          </div>
+          <div class="mt-1">
+            <img src="../../../assets/img_icon_twitter.png" />
+          </div>
+        </div>
+        <div class="login-bottom-content">
+          <h6>
+            Don't have account?
+            <a href="#" style="text-decoration: none;"><strong>SIGNUP</strong></a>
+          </h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
