@@ -1,0 +1,21 @@
+<app-header [isCategoryList]="true"></app-header>
+<div class="container position-absolute">
+  <div class="row mx-1">
+    <div class="component-title position-absolute mt-5 ml-5">Categories</div>
+    <div class="card-container">
+      <div *ngFor="let category of categoryList;">
+        <mat-card class="category-list-card">
+          <mat-icon class="icon-cat">{{ category.icon }}</mat-icon>
+          <p class="title-text text-center">{{ category.name }}</p>
+          <div class="icon-visibility">
+            <mat-icon class="icon-display" (click)="editCategory(category)">create</mat-icon>
+            <mat-icon class="icon-display" (click)="isDeleteCategory(category)">delete</mat-icon>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+    <div class="right-content">
+      <app-add-category [categoryData]="categoryData"></app-add-category>
+    </div>
+  </div>
+</div>

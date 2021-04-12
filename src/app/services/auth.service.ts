@@ -15,7 +15,9 @@ const httpOptions = {
   providedIn: 'root',
 })
 export class AuthService {
+
   loginUrl: string = environment.baseUrl + '/auth/login';
+
   constructor(private http: HttpClient, private cookieService: CookieService) {}
 
   loginUser(user: Login): Observable<Login> {

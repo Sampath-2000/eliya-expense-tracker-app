@@ -1,0 +1,38 @@
+<div class="container-fluid">
+  <div class="header shadow-sm w-100">
+    <div *ngIf="isCategoryList" class="d-flex">
+      <nav class="navbar navbar-expand-lg navbar-light bg-none container-fluid">
+        <img src="../../../assets/logo.png" [routerLink]="'/'" alt="LOGO" class="cursor-pointer header-image m-3">
+        <span class="title-text ml-3 mt-2">Category List</span>
+        <div class="f-grow-1"></div>
+        <div class="navbar-icons">
+          <i class="fa fa-search mt-2"></i>
+          <i class="fa fa-cog mr-5 mt-2" aria-hidden="true"></i>
+        </div>
+
+        <!-- User Detail -->
+        <div class="d-block mx-3" *ngIf="userName">
+          <div class="mb-0 font-size-15 cursor-pointer py-4" (mouseenter)="isDisplayOptions = true"
+            (mouseleave)="isDisplayOptions = false">
+            <span class="tooltip mt-2">
+              <i class="fa fa-user mr-2"></i>
+              <span class="user-name">{{userName}}</span>
+              <i class="fas fa fa-caret-up mx-2" *ngIf="isDisplayOptions"></i>
+              <i class="fas fa fa-caret-down mx-2" *ngIf="!isDisplayOptions"></i>
+            </span>
+            <div class="text-danger cursor-pointer mt-1 px-3 py-2 logout-option" (click)="logout()"
+              *ngIf="isDisplayOptions">
+              <i class="fas fa fa-caret-up text-white"></i>
+              <small>
+                <i class="fas fa fa-power-off mr-1"></i>
+                Logout
+              </small>
+            </div>
+          </div>
+        </div>
+        <!-- -->
+
+      </nav>
+    </div>
+  </div>
+</div>

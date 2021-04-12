@@ -1,4 +1,7 @@
 @import "node_modules/bootstrap/scss/bootstrap.scss";
+@import "~font-awesome/css/font-awesome.css";
+@import "theme/app-mat-theme";
+//@import "theme/app-utilities";
 
 html,
 body {
@@ -19,6 +22,94 @@ h3 {
   margin: 10px 0px 40px 40px;
 }
 
-.d-grid{
+.notification-custom-styles {
+  padding: 4% 5% 4% 4% !important;
+  background-image: none !important;
+}
+
+.notification-success {
+  background-color: #00c851 !important;
+  color: $light-primary-text;
+}
+
+.notification-error {
+  background-color: #ff4444 !important;
+  color: $light-primary-text;
+}
+
+.notification-info {
+  background-color: #33b5e5 !important;
+  color: $light-primary-text;
+}
+
+.notification-warning {
+  background-color: #ffbb33 !important;
+  color: $light-primary-text;
+}
+
+.d-grid {
   display: grid;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.title-text {
+  font-family: "Montserrat";
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.right-content {
+  width: 100%;
+  max-width: 36.1%;
+  height: 100vh;
+  background-color: #f2f2f2;
+  position: absolute;
+  left: 81rem;
+  border-top-left-radius: 30px;
+  margin: 0 0 0 40px;
+}
+
+.f-grow-1 {
+  flex-grow: 1;
+}
+
+.component-title {
+  font-family: "Montserrat";
+  font-size: 39px;
+  color: gray;
+  opacity: 0.7;
+  font-weight: 600;
+}
+
+::ng-deep .mat-form-field.mat-focused {
+  .mat-form-field-label {
+    color: #ff884d;
+  }
+  .mat-form-field-ripple {
+    background-color: #ff884d;
+  }
+  .mat-form-field-required-marker {
+    color: #ff884d;
+  }
+  .mat-input-element {
+    color: #ff884d;
+  }
+}
+
+.round-btn {
+  height: 32px;
+  border: none;
+  border-radius: 33px !important;
+  font-family: "Montserrat" !important;
+  font-size: 1em !important;
+  cursor: pointer;
+  outline: none;
+  min-width: 100px;
+  padding: 0 24px;
+  line-height: 32px;
+  color: white;
+  background: #f23b52;
 }

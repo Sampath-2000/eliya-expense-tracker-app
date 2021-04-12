@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { SharedRoutingModule } from './shared-routing.module';
 import { ErrorPageComponent } from './micro/error-page/error-page.component';
 
@@ -12,4 +11,5 @@ import { ErrorPageComponent } from './micro/error-page/error-page.component';
     SharedRoutingModule
   ]
 })
+
 export class SharedModule { }

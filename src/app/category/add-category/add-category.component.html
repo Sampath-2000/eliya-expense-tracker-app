@@ -1,0 +1,36 @@
+<div class="title-text mt-5 ml-5" *ngIf="!categoryData">ADD CATEGORY</div>
+<div class="title-text mt-5 ml-5" *ngIf="categoryData">UPDATE CATEGORY</div>
+<mat-card class="add-category-card ml-5 mt-4 p-0">
+  <mat-card-header>
+    <div class="d-grid">
+      <mat-form-field class="mt-3 input-box" *ngIf="!categoryData">
+        <mat-label>name</mat-label>
+        <input matInput id="name" type="text" name="name" [(ngModel)]="category.name" />
+      </mat-form-field>
+      <mat-form-field class="mt-3 input-box" *ngIf="categoryData">
+        <mat-label>name</mat-label>
+        <input matInput id="name" type="text" name="name" [(ngModel)]="categoryData.name" />
+      </mat-form-field>
+      <mat-form-field class="mt-3" *ngIf="!categoryData">
+        <mat-label>icon</mat-label>
+        <input *ngIf="!categoryData" matInput disabled type="text" name="icon" [(ngModel)]="category.icon" />
+        <mat-icon class="cursor-link float-right cursor-pointer" (click)="selectIcon()" matSuffix>insert_emoticon
+        </mat-icon>
+      </mat-form-field>
+      <!-- To add new Category -->
+      <button *ngIf="!categoryData" mat-flat-button class="round-btn w-50 ml-auto mr-auto"
+        (click)="addCategory()">SAVE</button>
+      <!--  -->
+      <mat-form-field class="mt-3" *ngIf="categoryData">
+        <mat-label>icon</mat-label>
+        <input matInput disabled type="text" name="icon" [(ngModel)]="categoryData.icon" />
+        <mat-icon class="cursor-link float-right cursor-pointer" (click)="updateIcon()" matSuffix>insert_emoticon
+        </mat-icon>
+      </mat-form-field>
+      <!-- To Update Category -->
+      <button *ngIf="categoryData" mat-flat-button class="round-btn w-50 ml-auto mr-auto"
+        (click)="updateCategory()">UPDATE</button>
+      <!--  -->
+    </div>
+  </mat-card-header>
+</mat-card>

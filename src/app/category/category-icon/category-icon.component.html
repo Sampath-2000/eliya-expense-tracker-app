@@ -1,0 +1,13 @@
+<div class="title-text"> Category Icons </div>
+<a [mat-dialog-close]="true" class="icon-close">
+  <span class="material-icons">
+    highlight_off
+  </span>
+</a>
+<div class="icon_content">
+  <div *ngFor="let icon of iconList">
+    <span class="icon_background">
+      <mat-icon (click)="selectIcon(icon)">{{ icon.icon }}</mat-icon>
+    </span>
+  </div>
+</div>

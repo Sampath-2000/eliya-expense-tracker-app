@@ -1,0 +1,36 @@
+.sidenav-menu {
+  width: 100%;
+  min-width: 125px;
+  max-width: 160px;
+  background-color: #f23b52;
+  border-top-right-radius: 30px;
+  height: 100% !important;
+
+  ul {
+    list-style: none;
+    align-items: center;
+    text-align: center;
+    padding: 35px;
+    width: 85px;
+    margin: 0;
+
+    li {
+      display: block;
+      margin-bottom: 40px;
+
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
+        font-family: "Montserrat", sans-serif;
+        font-weight: 500;
+        text-align: center;
+        cursor: pointer;
+
+        span {
+          color: white;
+        }
+      }
+    }
+  }
+}

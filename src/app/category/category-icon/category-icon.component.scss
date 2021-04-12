@@ -1,0 +1,25 @@
+.icon_content {
+  width: calc(100% - 40px);
+  padding: 20px;
+  .icon_background {
+    background-color: #f4f5f6;
+    margin: 1%;
+    color: rgba(255, 23, 68, 0.5);
+    float: left;
+    border-radius: 50%;
+    padding: 15px 15px 10px;
+    cursor: pointer;
+    &:hover {
+      color: #fff;
+      background-color: rgb(255, 23, 68);
+    }
+  }
+}
+.icon-close {
+  float: right;
+  cursor: pointer;
+  .material-icons {
+    font-size: 1.25em;
+    color: rgb(255, 23, 68);
+  }
+}

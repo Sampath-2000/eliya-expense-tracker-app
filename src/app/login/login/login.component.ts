@@ -29,11 +29,12 @@ export class LoginComponent implements OnInit {
           this.authService.setToken(result.token);
           this.cookieService.set('name', result.data.name);
           this.cookieService.set('userId', result.data._id);
-          this.router.navigateByUrl('/app/category');
+          this.router.navigateByUrl('app/category');
         }
       },
       (error) => {
         console.warn("Error");
+        location.reload();
       }
     );
   }
