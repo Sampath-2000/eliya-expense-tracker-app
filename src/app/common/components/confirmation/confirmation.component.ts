@@ -47,6 +47,24 @@ export class ConfirmationComponent implements OnInit {
           this.notificationService.showErrorMessage(`Can't Delete Category!!!`);
           this.dialog.closeAll();
         });
+      var categoryId = this.data.category._id;
+      var budgetId: any[] = [];
+      var position = (pos: any) => pos === categoryId;
+      for (var i = 0; i < this.budgetList.length; i++) {
+        budgetId.push(this.budgetList[i].categoryId);
+        var condition = categoryId == this.budgetList[i].categoryId;
+        if (condition) {
+          var index = budgetId.findIndex(position);
+          this.budgetService.deleteBudget(this.budgetList[index]).subscribe((res) => {
+            if (res) {
+              this.dialog.closeAll();
+              this.notificationService.showSuccessMessage('Deleted Sucessfully!!');
+              location.reload();
+            }
+          })
+
+        }
+      }
     }
 
     if (this.data.isBudget) {
