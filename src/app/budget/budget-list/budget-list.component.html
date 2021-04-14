@@ -1,0 +1,28 @@
+<app-header [isBudgetList]="true"></app-header>
+<div class="container position-absolute">
+  <div class="row mx-1">
+    <div class="component-title position-absolute mt-5 ml-5">Budgets</div>
+    <div class="card-container">
+
+      <div *ngFor="let category of categoryList;">
+        <mat-card class="budget-list-card">
+          <mat-icon class="icon-cat">{{ category.icon }}</mat-icon>
+          <p class="title-text text-center">{{ category.name }}</p>
+          <div class="icon-visibility">
+            <mat-icon class="icon-display" (click)="editCategory(category)">create</mat-icon>
+            <mat-icon class="icon-display" (click)="isDeleteBudget(category)">delete</mat-icon>
+          </div>
+          <div *ngFor="let budget of budgetList">
+            <button mat-flat-button class="round-btn w-50 d-block ml-auto mr-auto"
+              *ngIf="category?._id === budget?.categoryId;">{{budget.amount}}</button>
+            <button mat-flat-button class="round-btn w-50 d-block ml-auto mr-auto" *ngIf="budget.amount == 0">0</button>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+    <div class="right-content">
+      <app-add-budget [categoryData]="categoryData" [amount]="amount" [budgetData]="budgetData" [isPresent]="isPresent">
+      </app-add-budget>
+    </div>
+  </div>
+</div>

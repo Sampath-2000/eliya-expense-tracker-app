@@ -1,9 +1,10 @@
 <div class="container-fluid">
   <div class="header shadow-sm w-100">
-    <div *ngIf="isCategoryList" class="d-flex">
+    <div class="d-flex">
       <nav class="navbar navbar-expand-lg navbar-light bg-none container-fluid">
         <img src="../../../assets/logo.png" [routerLink]="'/'" alt="LOGO" class="cursor-pointer header-image m-3">
-        <span class="title-text ml-3 mt-2">Category List</span>
+        <span class="title-text ml-3 mt-2" *ngIf="isCategoryList">Category List</span>
+        <span class="title-text ml-3 mt-2" *ngIf="isBudgetList">Budget List</span>
         <div class="f-grow-1"></div>
         <div class="navbar-icons">
           <i class="fa fa-search mt-2"></i>

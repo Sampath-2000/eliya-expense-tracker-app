@@ -1,0 +1,100 @@
+.budget-list-card {
+  background: #f2f2f2;
+  width: 14rem;
+  height: 15rem;
+  left: 6rem;
+  margin-bottom: 50px;
+  top: 117px;
+  border-radius: 24px;
+  box-shadow: none;
+  cursor: pointer;
+  margin: 25px 25px;
+  padding: 30px;
+}
+
+.title-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.container {
+  margin: 0 154px;
+}
+
+.mat-icon.icon-cat {
+  width: 100%;
+  font-size: 5em;
+  text-align: center;
+  color: #f23b52;
+  font-size: 5em;
+}
+
+.card-container {
+  display: contents;
+  height: auto;
+}
+
+.round-btn {
+  height: 36px !important;
+  border: none;
+  border-radius: 8px !important;
+  font-family: "Montserrat" !important;
+  font-size: 1em !important;
+  cursor: pointer;
+  outline: none;
+  min-width: 100px;
+  padding: 0 24px;
+  line-height: 32px;
+  color: white;
+  background: #f23b52;
+  top: 3rem;
+  font-weight: 600;
+}
+
+.icon-visibility {
+  display: none;
+  justify-content: space-between;
+}
+
+.icon-display {
+  display: flex;
+  justify-content: space-between;
+  font-size: 3em;
+  color: rgb(165, 165, 165);
+}
+
+.budget-list-card {
+  &:hover {
+    background-color: #f23b52;
+    color: #fff;
+    cursor: pointer;
+
+    .mat-icon.icon-cat {
+      color: white;
+    }
+
+    .round-btn {
+      top: -1rem;
+      color: black;
+      background: #fff;
+      position: absolute;
+      left: 3.5rem;
+      box-shadow: 0px 0px 5px #253a4b;
+      transition: 0.4s;
+    }
+
+    .icon-visibility {
+      display: flex;
+      color: #fff;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 50px;
+
+      .icon-display {
+        font-size: 2.2em;
+        color: #fff;
+      }
+    }
+  }
+}

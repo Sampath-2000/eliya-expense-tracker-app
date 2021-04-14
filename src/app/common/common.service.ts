@@ -29,4 +29,8 @@ export class CommonService {
   getCategoryList(): Observable<any> {
     return this.http.get(`${this.BACKEND_API}/categories?isActive=true` + '&userId=' + this.cookieService.get('userId'), this.httpOptions);
   }
+
+  getBudgetList(): Observable<any> {
+    return this.http.get(`${this.BACKEND_API}/budgets?isActive=true` + '&userId=' + this.cookieService.get('userId'), this.httpOptions);
+  }
 }

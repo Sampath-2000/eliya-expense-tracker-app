@@ -14,6 +14,7 @@ export class HeaderComponent implements OnInit {
   isDisplayOptions: boolean = false;  //to display dropdown for logging out the user
 
   @Input() isCategoryList = false;
+  @Input() isBudgetList = false;
 
   constructor(
     private cookieService : CookieService,

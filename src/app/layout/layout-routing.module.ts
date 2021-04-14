@@ -18,6 +18,21 @@ const routes: Routes = [
         path: '**', component: ErrorPageComponent
       }
     ]
+  },
+
+  {
+    path: 'budget',
+    canActivate: [AppGuard],
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('../budget/budget.module').then((module) => module.BudgetModule)
+      },
+      {
+        path: '**', component: ErrorPageComponent
+      }
+    ]
   }
 ];
 

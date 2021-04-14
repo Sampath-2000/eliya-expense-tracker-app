@@ -10,6 +10,7 @@ import { LayoutModule } from './layout/layout.module';
 import { MaterialModule } from './shared/material.module';
 import { CategoryModule } from './category/category.module';
 import { ConfirmationComponent } from './common/components/confirmation/confirmation.component';
+import { BudgetModule } from './budget/budget.module';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { ConfirmationComponent } from './common/components/confirmation/confirma
     CategoryModule,
     LayoutModule,
     MaterialModule,
+    BudgetModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]
