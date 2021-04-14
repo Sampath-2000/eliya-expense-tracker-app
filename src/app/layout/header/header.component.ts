@@ -1,7 +1,9 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
 import { AuthService } from 'src/app/services/auth.service';
+import { AddExpenseComponent } from '../add-expense/add-expense.component';
 
 @Component({
   selector: 'app-header',
@@ -19,7 +21,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private cookieService : CookieService,
     private authService : AuthService,
-    private router : Router
+    private router : Router,
+    public dialog: MatDialog,
   ) { }
 
   ngOnInit(): void {
@@ -29,5 +32,11 @@ export class HeaderComponent implements OnInit {
   logout() {
     this.authService.removeToken();
     this.router.navigateByUrl('/login/auth');
+  }
+
+  openAddExpense(){
+    const dialogRef = this.dialog.open(AddExpenseComponent, {
+      width: '30%',
+    });
   }
 }

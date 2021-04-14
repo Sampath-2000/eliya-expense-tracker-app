@@ -6,6 +6,9 @@
         <span class="title-text ml-3 mt-2" *ngIf="isCategoryList">Category List</span>
         <span class="title-text ml-3 mt-2" *ngIf="isBudgetList">Budget List</span>
         <div class="f-grow-1"></div>
+        <button mat-flat-button class="round-btn w-10 mr-5 mt-3" (click)="openAddExpense()">
+          Add Expense
+        </button>
         <div class="navbar-icons">
           <i class="fa fa-search mt-2"></i>
           <i class="fa fa-cog mr-5 mt-2" aria-hidden="true"></i>

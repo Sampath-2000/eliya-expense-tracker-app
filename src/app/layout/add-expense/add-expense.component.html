@@ -1,0 +1,41 @@
+<h4>Add</h4>
+<mat-tab-group>
+  <mat-tab label="Expense">
+    <div class="form-box">
+      <form class="form-field">
+        <div class="txt">
+          <mat-form-field class="textbox">
+            <mat-label>amount</mat-label>
+            <input matInput type="number" name="amount" />
+          </mat-form-field>
+          <mat-form-field class="textbox">
+            <mat-label>Wallet</mat-label>
+            <mat-select>
+              <mat-option>
+
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <div class="textbox">
+            <mat-label>Category</mat-label>
+            <ul class="category-wrap">
+              <li>
+                <mat-icon></mat-icon>
+              </li>
+            </ul>
+          </div>
+          <mat-form-field class="textbox">
+            <mat-label>description</mat-label>
+            <textarea matInput type="textarea" name="description" style="height: 75px;"></textarea>
+          </mat-form-field>
+        </div>
+      </form>
+
+      <button mat-flat-button class="btn-rounded" color="primary">
+        Save
+      </button>
+    </div>
+  </mat-tab>
+  <mat-tab label="Income"> Content 2 </mat-tab>
+  <mat-tab label="Transaction"> Content 3 </mat-tab>
+</mat-tab-group>
