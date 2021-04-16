@@ -1,0 +1,23 @@
+<app-header [isWalletList]="true"></app-header>
+<div class="container position-absolute">
+  <div class="row mx-1">
+    <div class="component-title position-absolute mt-5 ml-4">Wallet</div>
+    <div class="card-container">
+      <div *ngFor="let wallet of walletList;">
+        <mat-card class="wallet-list-card">
+          <p class="title-text mt-3 ml-4 position-absolute">{{ wallet.name }}</p>
+          <h3 class="wallet-amount position-absolute">{{ wallet.amount | indianCurrency }}</h3>
+          <div class="icons float-right mt-2">
+            <mat-icon class="icon-display d-block mb-3" (click)="editWallet(wallet)">create</mat-icon>
+            <mat-icon class="icon-display mb-3" (click)="deleteWallet(wallet)">delete</mat-icon>
+            <mat-icon class="icon-display d-block">speaker_notes</mat-icon>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="right-content">
+  <app-add-wallet [walletData]="walletData"></app-add-wallet>
+</div>

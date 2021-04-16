@@ -11,6 +11,7 @@ import { MaterialModule } from './shared/material.module';
 import { CategoryModule } from './category/category.module';
 import { ConfirmationComponent } from './common/components/confirmation/confirmation.component';
 import { BudgetModule } from './budget/budget.module';
+import { WalletsModule } from './wallets/wallets.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { BudgetModule } from './budget/budget.module';
     CategoryModule,
     LayoutModule,
     MaterialModule,
-    BudgetModule
+    BudgetModule,
+    WalletsModule
   ],
   providers: [CookieService],
   bootstrap: [AppComponent]

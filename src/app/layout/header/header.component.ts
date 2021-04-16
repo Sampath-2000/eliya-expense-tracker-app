@@ -17,6 +17,7 @@ export class HeaderComponent implements OnInit {
 
   @Input() isCategoryList = false;
   @Input() isBudgetList = false;
+  @Input() isWalletList = false;
 
   constructor(
     private cookieService : CookieService,

@@ -33,6 +33,21 @@ const routes: Routes = [
         path: '**', component: ErrorPageComponent
       }
     ]
+  },
+
+  {
+    path: 'wallets',
+    canActivate: [AppGuard],
+    component: LayoutComponent,
+    children: [
+      {
+        path: '',
+        loadChildren: () => import('../wallets/wallets.module').then((module) => module.WalletsModule)
+      },
+      {
+        path: '**', component: ErrorPageComponent
+      }
+    ]
   }
 ];
 

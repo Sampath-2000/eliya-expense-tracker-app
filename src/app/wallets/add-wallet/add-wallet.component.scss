@@ -1,0 +1,26 @@
+.add-wallet-card {
+  box-shadow: none;
+  width: 21rem;
+  height: 22rem;
+  border-radius: 30px;
+}
+
+.input-box {
+  width: 17rem;
+}
+
+::ng-deep .mat-form-field.mat-focused {
+  .mat-form-field-label {
+    color: #f23b52;
+    cursor: pointer;
+  }
+  .mat-form-field-ripple {
+    background-color: #f23b52;
+  }
+  .mat-form-field-required-marker {
+    color: #f23b52;
+  }
+  .mat-input-element {
+    color: black;
+  }
+}

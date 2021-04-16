@@ -2,6 +2,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialog, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { BudgetService } from 'src/app/budget/services/budget.service';
 import { CategoryService } from 'src/app/category/services/category.service';
+import { WalletService } from 'src/app/wallets/services/wallet.service';
 import { CommonService } from '../../common.service';
 import { NotificationService } from '../../notification-service/notification.service';
 
@@ -18,6 +19,7 @@ export class ConfirmationComponent implements OnInit {
     private categoryService: CategoryService,
     private budgetService: BudgetService,
     private commonService: CommonService,
+    private walletService: WalletService,
     private notificationService: NotificationService,
     public dialog: MatDialog,
     @Inject(MAT_DIALOG_DATA) public data: any = {}
@@ -89,6 +91,17 @@ export class ConfirmationComponent implements OnInit {
           this.dialog.closeAll();
         }
       }
+    }
+
+    if(this.data.isWallet){
+      this.walletService.deleteWallet(this.data.wallet).subscribe(() =>{
+        this.notificationService.showSuccessMessage('Deleted Wallet Sucessfully..!');
+        location.reload();
+        this.dialog.closeAll();
+      }, () =>{
+        this.notificationService.showErrorMessage('Unable To Delete Wallet try again later....!');
+        this.dialog.closeAll();
+      })
     }
   }
 }

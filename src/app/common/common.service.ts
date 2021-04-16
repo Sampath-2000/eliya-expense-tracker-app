@@ -33,4 +33,8 @@ export class CommonService {
   getBudgetList(): Observable<any> {
     return this.http.get(`${this.BACKEND_API}/budgets?isActive=true` + '&userId=' + this.cookieService.get('userId'), this.httpOptions);
   }
+
+  getWalletList(): Observable<any> {
+    return this.http.get(`${this.BACKEND_API}/wallets?isActive=true` + '&userId=' + this.cookieService.get('userId'), this.httpOptions);
+  }
 }

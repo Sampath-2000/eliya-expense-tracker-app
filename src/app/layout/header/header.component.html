@@ -5,6 +5,7 @@
         <img src="../../../assets/logo.png" [routerLink]="'/'" alt="LOGO" class="cursor-pointer header-image m-3">
         <span class="title-text ml-3 mt-2" *ngIf="isCategoryList">Category List</span>
         <span class="title-text ml-3 mt-2" *ngIf="isBudgetList">Budget List</span>
+        <span class="title-text ml-3 mt-2" *ngIf="isWalletList">Wallet List</span>
         <div class="f-grow-1"></div>
         <button mat-flat-button class="round-btn w-10 mr-5 mt-3" (click)="openAddExpense()">
           Add Expense

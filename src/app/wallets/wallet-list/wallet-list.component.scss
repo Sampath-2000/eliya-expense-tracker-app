@@ -1,0 +1,71 @@
+.wallet-list-card {
+  background: #f2f2f2;
+  width: 14rem;
+  height: 10rem;
+  margin-left: 69px;
+  margin-bottom: 50px;
+  top: 117px;
+  border-radius: 24px;
+  box-shadow: none;
+}
+
+.row {
+  width: 106%;
+}
+
+.container {
+  margin: 0 154px;
+}
+
+.title-text {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  max-width: 154px;
+}
+
+.mat-icon {
+  color: #bebcbc;
+}
+
+.card-container {
+  display: contents;
+  height: auto;
+}
+
+.right-content {
+  width: 22.1% !important;
+  left: 90rem !important;
+}
+
+.wallet-amount {
+  color: #f23b52;
+  font-size: 24px;
+  text-overflow: ellipsis;
+  width: 66%;
+  white-space: nowrap;
+  overflow: hidden;
+  font-family: "Montserrat";
+  top: 95px;
+  font-weight: bold;
+}
+
+.wallet-amount:hover {
+  text-overflow: clip;
+  white-space: normal;
+  word-break: break-all;
+  cursor: pointer;
+}
+
+.wallet-list-card {
+  &:hover {
+    background-color: #f23b52;
+    color: #fff;
+    cursor: pointer;
+
+    .mat-icon,
+    .wallet-amount {
+      color: white;
+    }
+  }
+}
