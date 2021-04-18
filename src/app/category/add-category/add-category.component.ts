@@ -73,5 +73,9 @@ export class AddCategoryComponent implements OnInit {
       this.notificationService.showErrorMessage(`Can't Update Category`);
     });
   }
+
+  cancelUpdate() {
+    location.reload();
+  }
 }
 

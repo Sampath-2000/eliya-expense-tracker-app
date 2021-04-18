@@ -30,18 +30,18 @@ export class AddBudgetComponent implements OnInit {
   addBudget() {
     this.budget.amount = this.amount;
     this.budget.categoryId = this.categoryData._id;
-    if(this.budget.amount > 0){
-    this.budgetService.addBudget(this.budget).subscribe(() => {
-      this.notificationService.showSuccessMessage('Added Budget Sucessfully!!');
-      location.reload();
+    if (this.budget.amount > 0) {
+      this.budgetService.addBudget(this.budget).subscribe(() => {
+        this.notificationService.showSuccessMessage('Added Budget Sucessfully!!');
+        location.reload();
+      }
+        , () => {
+          this.notificationService.showErrorMessage('Cannot Add Budget Try Again Later!!');
+        })
     }
-    , () => {
-      this.notificationService.showErrorMessage('Cannot Add Budget Try Again Later!!');
-    })
-  }
-  else{
-    this.notificationService.showErrorMessage('Please Add Amount!!');
-  }
+    else {
+      this.notificationService.showErrorMessage('Please Add Amount!!');
+    }
   }
 
   updateBudget() {
@@ -54,5 +54,9 @@ export class AddBudgetComponent implements OnInit {
     }, () => {
       this.notificationService.showErrorMessage('Cannot Update Budget!!');
     })
+  }
+
+  cancelUpdate() {
+    location.reload();
   }
 }

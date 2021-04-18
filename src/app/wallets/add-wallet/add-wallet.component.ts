@@ -51,6 +51,6 @@ export class AddWalletComponent implements OnInit {
   }
 
   cancelUpdate() {
-    this.walletData = null;
+    location.reload();
   }
 }
