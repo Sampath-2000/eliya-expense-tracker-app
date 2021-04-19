@@ -18,6 +18,7 @@ export class BudgetListComponent implements OnInit {
   amount: any;
   budgetData: any;
   isPresent: boolean = false;
+  showSpinner: boolean = false;
 
   constructor(
     private titleService: Title,
@@ -33,8 +34,12 @@ export class BudgetListComponent implements OnInit {
   }
 
   getCategoryList() {
+    this.showSpinner = true;
     this.commonService.getCategoryList().subscribe((res) => {
       this.categoryList = res.data;
+      if (this.showSpinner) {
+        this.showSpinner = false
+      }
     }, () => {
       this.notificationService.showErrorMessage(`Can't Fetch Budgets...!`);
     })
@@ -69,7 +74,7 @@ export class BudgetListComponent implements OnInit {
     }
   }
 
-  isDeleteBudget(category: any){
+  isDeleteBudget(category: any) {
     var isBudget = true;
     const dialogRef = this.dialog.open(ConfirmationComponent, {
       width: '400px',
