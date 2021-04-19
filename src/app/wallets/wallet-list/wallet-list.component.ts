@@ -13,6 +13,7 @@ export class WalletListComponent implements OnInit {
 
   walletList: any;
   walletData: any;
+  showSpinner: boolean = false;
 
   constructor(
     private titleService: Title,
@@ -26,8 +27,12 @@ export class WalletListComponent implements OnInit {
   }
 
   getWalletList() {
+    this.showSpinner = true;
     this.commonService.getWalletList().subscribe((res) => {
       this.walletList = res.data;
+      if (this.walletList) {
+        this.showSpinner = false;
+      }
     })
   }
 

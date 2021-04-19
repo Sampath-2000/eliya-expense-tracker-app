@@ -21,3 +21,8 @@
 <div class="right-content">
   <app-add-wallet [walletData]="walletData"></app-add-wallet>
 </div>
+
+<!-- Spinning Loader-->
+<div class="loading-indicator">
+  <mat-spinner *ngIf="showSpinner"></mat-spinner>
+</div>
