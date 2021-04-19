@@ -9,6 +9,7 @@ import { MaterialModule } from '../shared/material.module';
 import { CategoryIconComponent } from './category-icon/category-icon.component';
 import { FormsModule } from '@angular/forms';
 import { MatDialogRef } from '@angular/material/dialog';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [CategoryListComponent, AddCategoryComponent, CategoryIconComponent],
@@ -19,6 +20,7 @@ import { MatDialogRef } from '@angular/material/dialog';
     SharedModule,
     MaterialModule,
     FormsModule,
+    MatProgressSpinnerModule,
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   providers: [

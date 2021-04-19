@@ -15,6 +15,7 @@ export class CategoryListComponent implements OnInit {
 
   categoryList: any;
   categoryData: any;
+  showSpinner: boolean = false;
 
   constructor(
     private titleService: Title,
@@ -29,8 +30,12 @@ export class CategoryListComponent implements OnInit {
   }
 
   getCategoryList() {
+    this.showSpinner = true;
     this.commonService.getCategoryList().subscribe((res) => {
       this.categoryList = res.data;
+      if (this.categoryList) {
+        this.showSpinner = false;
+      }
     }, () => {
       this.notificationService.showErrorMessage(`Can't Fetch Categories!!`);
     });
