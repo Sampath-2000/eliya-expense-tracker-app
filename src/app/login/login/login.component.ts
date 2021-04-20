@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
+import { NotificationService } from 'src/app/common/notification-service/notification.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { Login } from '../models/login-dto';
 
@@ -17,6 +18,7 @@ export class LoginComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private cookieService: CookieService,
+    private notificationService: NotificationService,
     private router: Router) { }
 
   ngOnInit(): void { }
@@ -33,8 +35,7 @@ export class LoginComponent implements OnInit {
         }
       },
       (error) => {
-        console.warn("Error");
-        location.reload();
+        this.notificationService.showErrorMessage('Username Or Password Is Incorrect');
       }
     );
   }
